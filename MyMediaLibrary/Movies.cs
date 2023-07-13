@@ -7,6 +7,7 @@ namespace MyMediaLibrary
         public string Director { get; set; }
         public double Rating { get; set; }
 
+
         // Constructor for the a new Movies Object
         public Movie(string title, TimeSpan duration, DateTime releaseDate, MediaGenre genre, MediaStatus status, string director, double rating)
             : base(title, duration, releaseDate, genre, status)

@@ -7,6 +7,7 @@ namespace MyMediaLibrary
         public string Author { get; set; }
         public double Rating { get; set; }
 
+
         // Constructor for creating a new Book object.
         public Book(string title, TimeSpan duration, DateTime releaseDate, MediaGenre genre, MediaStatus status, string author, double rating)
             : base(title, duration, releaseDate, genre, status)

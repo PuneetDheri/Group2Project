@@ -12,7 +12,6 @@ namespace MyMediaLibrary
         public VideoGame(string title, TimeSpan duration, DateTime releaseDate, MediaGenre genre, MediaStatus status, string creator, string publisher)
             : base(title, duration, releaseDate, genre, status)
         {
-
             Creator = creator;
             Publisher = publisher;
         }
