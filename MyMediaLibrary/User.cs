@@ -14,8 +14,8 @@ namespace MyMediaLibrary
 			_email = email;
 		}
 
-		//methods GetName() and GetEmail() are going to return
-		//the name and the email
+		//methods GetName() and GetEmail() are going to return the value
+		//the name and the email methods
 		public string GetName() {
 			return _name;
 		}
