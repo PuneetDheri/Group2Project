@@ -36,6 +36,11 @@ namespace MyMediaLibrary
         protected MediaGenre Genre { get; set; }
         protected MediaStatus Status { get; set; }
 
+        public string GetTitle()
+        {
+            return Title;
+        }
+
         // constructor 
         public MediaItem(string title, TimeSpan duration, DateTime releaseDate, MediaGenre genre, MediaStatus status)
         {

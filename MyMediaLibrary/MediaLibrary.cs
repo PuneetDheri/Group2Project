@@ -19,6 +19,24 @@ namespace MyMediaLibrary
             //add the mediaItem to the mediaItems list
             mediaItems.Add(mediaItem);
         }
+
+
+        public bool RemoveMedia(string title)
+        {
+
+            foreach (MediaItem mediaItem in mediaItems)
+            {
+                if (mediaItem.GetTitle().ToLower() == title.ToLower()) //converting to lowercase to ignore case senstivity
+                {
+                    mediaItems.Remove(mediaItem);
+                    return true; //media removed successfully
+                }
+            }
+
+
+            return false; //media with title not found in list
+        }
+
     }
 }
 
