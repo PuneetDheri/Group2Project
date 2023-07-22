@@ -37,6 +37,26 @@ namespace MyMediaLibrary
             return false; //media with title not found in list
         }
 
+        public bool EditMedia(string title, string newTitle, MediaStatus newStatus ) {
+
+            foreach (MediaItem mediaItem in mediaItems) {
+
+                if (mediaItem.GetTitle().ToLower() == mediaItem.GetTitle().ToLower())
+                {
+
+                   // mediaItem potentially needs to set the title to the new one
+                    return true;
+                   
+                
+
+                }
+
+            }
+            return false;
+
+
+        }
+
     }
 }
 
