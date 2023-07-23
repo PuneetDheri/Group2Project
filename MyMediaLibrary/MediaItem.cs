@@ -41,6 +41,24 @@ namespace MyMediaLibrary
             return Title;
         }
 
+        
+        public void SetTitle(string newTitle) {
+
+            Title = newTitle;
+
+        }
+
+        public MediaStatus GetStatus() {
+
+            return Status;
+
+        }
+
+        public void SetStatus(MediaStatus newStatus) {
+            Status = newStatus;
+        }
+
+
         // constructor 
         public MediaItem(string title, TimeSpan duration, DateTime releaseDate, MediaGenre genre, MediaStatus status)
         {
