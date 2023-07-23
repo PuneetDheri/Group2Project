@@ -89,6 +89,23 @@ namespace MyMediaLibrary
             return playlist;
         }
 
+        //search a title
+        public List<MediaItem> SearchByTitle(string searchTerm) {
+
+            List<MediaItem> results = new List<MediaItem>();
+
+            //analyzes the list and if it is seen then it adds and returns results
+            foreach (MediaItem mediaItem in mediaItems) {
+
+                if(mediaItem.GetTitle().ToLower() == searchTerm.ToLower()) {
+                    results.Add(mediaItem);
+                }
+
+            }
+
+            return results;
+        }
+
     }
 }
 
