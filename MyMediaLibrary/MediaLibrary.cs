@@ -44,7 +44,11 @@ namespace MyMediaLibrary
                 if (mediaItem.GetTitle().ToLower() == mediaItem.GetTitle().ToLower())
                 {
 
-                   // mediaItem potentially needs to set the title to the new one
+                    // mediaItem potentially needs to set the title to the new one
+
+                    mediaItem.SetTitle(newTitle);
+                    mediaItem.SetStatus(newStatus);
+
                     return true;
                    
                 
