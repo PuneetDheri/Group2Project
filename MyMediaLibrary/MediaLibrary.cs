@@ -41,7 +41,7 @@ namespace MyMediaLibrary
 
             foreach (MediaItem mediaItem in mediaItems) {
 
-                if (mediaItem.GetTitle().ToLower() == mediaItem.GetTitle().ToLower())
+                if (mediaItem.GetTitle().ToLower() == title.ToLower())
                 {
 
                     // mediaItem potentially needs to set the title to the new one
@@ -75,19 +75,7 @@ namespace MyMediaLibrary
             return results;
         }
 
-        // Create playlist method
-        public List<MediaItem> CreatePlaylist(List<MediaItem> selectedItems)
-        {
-            List<MediaItem> playlist = new List<MediaItem>();
-
-            // Add selected media items to the playlist
-            foreach (MediaItem item in selectedItems)
-            {
-                playlist.Add(item);
-            }
-
-            return playlist;
-        }
+        
 
         //search a title
         public List<MediaItem> SearchByTitle(string searchTerm) {
@@ -104,6 +92,31 @@ namespace MyMediaLibrary
             }
 
             return results;
+        }
+
+
+        // Create playlist method
+        public List<MediaItem> CreatePlaylist(List<MediaItem> selectedItems)
+        {
+            List<MediaItem> playlist = new List<MediaItem>();
+
+            // Add selected media items to the playlist
+            foreach (MediaItem item in selectedItems)
+            {
+                playlist.Add(item);
+            }
+
+            return playlist;
+        }
+
+        // delete playlist method
+        public void DeletePlaylist(List<MediaItem> playlist)
+        {
+            //delte playlist items from the library
+            foreach (MediaItem playlistItem in playlist)
+            {
+                mediaItems.Remove(playlistItem);
+            }
         }
 
     }
