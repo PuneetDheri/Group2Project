@@ -33,7 +33,7 @@ namespace MyMediaLibrary
         protected string Title { get; set; }
         protected TimeSpan Duration { get; set; }
         protected DateTime ReleaseDate { get; set; }
-        protected MediaGenre Genre { get; set; }
+        public MediaGenre Genre { get; set; }
         protected MediaStatus Status { get; set; }
 
         public string GetTitle()

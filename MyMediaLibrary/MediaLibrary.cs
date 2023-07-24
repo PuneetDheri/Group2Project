@@ -75,6 +75,20 @@ namespace MyMediaLibrary
             return results;
         }
 
+        // Create playlist method
+        public List<MediaItem> CreatePlaylist(List<MediaItem> selectedItems)
+        {
+            List<MediaItem> playlist = new List<MediaItem>();
+
+            // Add selected media items to the playlist
+            foreach (MediaItem item in selectedItems)
+            {
+                playlist.Add(item);
+            }
+
+            return playlist;
+        }
+
     }
 }
 
