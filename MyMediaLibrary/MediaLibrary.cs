@@ -77,7 +77,7 @@ namespace MyMediaLibrary
 
         
 
-        //search a title
+        //search a title (made)
         public List<MediaItem> SearchByTitle(string searchTerm) {
 
             List<MediaItem> results = new List<MediaItem>();
