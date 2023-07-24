@@ -60,6 +60,20 @@ namespace MyMediaLibrary
 
 
         }
+        // Search for media items in the library by genre
+        public List<MediaItem> SearchByGenre(MediaGenre genre)
+        {
+            List<MediaItem> results = new List<MediaItem>();
+            foreach (MediaItem item in mediaItems)
+            {
+                // Check if the media item's genre matches the specified genre
+                if (item.Genre == genre)
+                {
+                    results.Add(item);
+                }
+            }
+            return results;
+        }
 
     }
 }
