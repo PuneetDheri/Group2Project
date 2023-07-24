@@ -67,7 +67,7 @@ namespace MyMediaLibrary
             foreach (MediaItem item in mediaItems)
             {
                 // Check if the media item's genre matches the specified genre
-                if (item.Genre == genre)
+                if (item.GetGenre() == genre)
                 {
                     results.Add(item);
                 }
