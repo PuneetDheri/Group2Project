@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyMediaLibrary.Pages.UserLogin"
+             Title="UserLogin">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome User! (Input your name and email)"/>
+
+        <Entry
+            x:Name="NameEntry"
+            Placeholder="Input name:"
+            />
+
+        <Entry
+            x:Name="EmailEntry"
+            Placeholder="Input email:"
+            />
+
+        <Button
+            x:Name="EnterButton"
+            Text="Enter"
+            />
+
+        <Button
+            x:Name="CreateAccountButton"
+            Text="Create new account"
+
+            />
+
+
+    </VerticalStackLayout>
+</ContentPage>
