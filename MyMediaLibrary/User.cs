@@ -3,7 +3,7 @@ namespace MyMediaLibrary
 {
 	public class User
 	{
-		//both user and email are going to be private values
+		//both user and email are going to be private valuesm
 		private string _name;
 		private string _email;
 
