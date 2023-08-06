@@ -3,17 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyMediaLibrary.Pages.SearchPage"
              Title="SearchPage">
-    <VerticalStackLayout>
+    <VerticalStackLayout Padding="50">
         <Label 
             Text="What would you like to search for?"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="StartAndExpand"
+            FontSize="40"/>
 
         <Entry
             x:Name="SearchBarEntry"
             VerticalOptions="Center"
-            HorizontalOptions="Center"
+            HorizontalOptions="StartAndExpand"
             Placeholder="Search for anything!"
+            WidthRequest="600"
+            FontSize="20"
             />
 
 
@@ -23,7 +26,10 @@
         <Button
             x:Name="HomeMenuButton"
             VerticalOptions="Center"
-            HorizontalOptions="Center"
+            HorizontalOptions="StartAndExpand"
+            Text="Home"
+            Grid.Column="3"
+            
 
             />
 
