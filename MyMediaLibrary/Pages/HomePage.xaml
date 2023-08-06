@@ -6,22 +6,142 @@
 
 
     <VerticalStackLayout>
-        <Label 
+
+        <Label
+             Text="Welcome User"
+            FontAttributes="Bold"
+            FontSize="30"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+             BackgroundColor="Gray"
+
+            />
+
+
+            <Label 
             Text="My Media Library"
             FontAttributes="Bold"
-            FontSize="Large"
+            FontSize="48"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-
-        <HorizontalStackLayout>
-
-        <Button>
-            x:name:"AddMediaButton"
-
-        </Button>
+            HorizontalOptions="Center"
+            Margin="0,50,0,50"
+                BackgroundColor="DarkBlue"
 
 
-    </HorizontalStackLayout>
+            />
+
+
+
+        <HorizontalStackLayout HorizontalOptions="Start">
+
+
+            <VerticalStackLayout VerticalOptions="Start">
+
+                 <Button
+            x:Name="SearchButton"
+            Text="Search"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start"
+               
+                Margin="0,20,0,0"
+            />
+
+
+                 <Button
+            x:Name="DropButton"
+            Text="Drop"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start"
+               
+                Margin="0,20,0,0"
+            />
+
+
+                 <Button
+            x:Name="AddButton"
+            Text="Add"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start"
+               
+                Margin="0,20,0,0"
+            />
+
+                 <Button
+            x:Name="EditButton"
+            Text="Edit"
+           VerticalOptions="Start" 
+            HorizontalOptions="Start"
+               
+                Margin="0,20,0,0"
+            />
+
+
+            </VerticalStackLayout>
+
+           <VerticalStackLayout >
+
+               <HorizontalStackLayout HorizontalOptions="Center" >
+
+                    <Button
+            x:Name="AllMediaButton"
+            Text="All Media"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+                Grid.Column="0"
+                Margin="100,0,20,0"
+            />
+
+            <Button
+            x:Name="CompletedButton"
+            Text="Completed"
+                VerticalOptions="Center" 
+            HorizontalOptions="Center"
+                Grid.Column="1"
+                Margin="0,0,20,0"
+               
+            />
+
+                <Button
+            x:Name="CurrentlyWatchingButton"
+            Text="Currently Watching"
+                VerticalOptions="Center" 
+            HorizontalOptions="Center"
+                Grid.Column="2"
+                Margin="0,0,20,0"
+                
+            />
+
+             <Button
+            x:Name="PlanToWatchButton"
+            Text="Plan to Watch"
+                 VerticalOptions="Center" 
+            HorizontalOptions="Center"
+                Grid.Column="3"
+                 Margin="0,0,20,0"
+                
+            />
+
+
+
+             <Button
+            x:Name="DroppedButton"
+            Text="Dropped"
+                 VerticalOptions="Center" 
+            HorizontalOptions="Center"
+                Grid.Column="4"
+                 Margin="0,0,20,0"
+                 
+            />
+
+
+               </HorizontalStackLayout>
+                       
+
+           </VerticalStackLayout>
+            
+
+
+            </HorizontalStackLayout>
 
 
     </VerticalStackLayout>
