@@ -3,9 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyMediaLibrary.Pages.UserLogin"
              Title="UserLogin">
-    <VerticalStackLayout>
+    <VerticalStackLayout Padding="400">
         <Label 
-            Text="Welcome User! (Input your name and email)"/>
+            Text="Welcome User! (Input your name and email)"
+            FontSize="Large"
+            HorizontalOptions="Center"
+            BackgroundColor="DeepSkyBlue"
+            />
 
         <Entry
             x:Name="NameEntry"
@@ -15,17 +19,20 @@
         <Entry
             x:Name="EmailEntry"
             Placeholder="Input email:"
+            
             />
 
         <Button
             x:Name="EnterButton"
             Text="Enter"
+            WidthRequest="200"
+            Clicked="OnHomePage"
             />
 
         <Button
             x:Name="CreateAccountButton"
             Text="Create new account"
-
+            WidthRequest="200"
             />
 
 

@@ -8,6 +8,7 @@
     <VerticalStackLayout>
 
         <Label
+            x:Name="UserLabel"
              Text="Welcome User"
             FontAttributes="Bold"
             FontSize="30"

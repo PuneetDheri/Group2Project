@@ -5,8 +5,28 @@
              Title="SearchPage">
     <VerticalStackLayout>
         <Label 
-            Text=""
+            Text="What would you like to search for?"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <Entry
+            x:Name="SearchBarEntry"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Placeholder="Search for anything!"
+            />
+
+
+
+
+
+        <Button
+            x:Name="HomeMenuButton"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+
+            />
+
+
     </VerticalStackLayout>
 </ContentPage>
