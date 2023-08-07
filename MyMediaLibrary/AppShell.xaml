@@ -9,7 +9,7 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate pages:AddPage}"
+        ContentTemplate="{DataTemplate pages:EditPage }"
 
         Route="MainPage" />
 

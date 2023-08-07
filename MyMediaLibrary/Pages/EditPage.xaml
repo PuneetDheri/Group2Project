@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyMediaLibrary.Pages.EditPage"
+             Title="EditPage">
+
+
+
+        <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
+
+        <Label Text="Edit Media"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               Margin="0,0,0,20" />
+
+        <Entry Placeholder="New Name"
+               x:Name="NewNameEntry"
+               FontSize="Medium"
+               Margin="0,0,0,10" />
+
+        <Picker x:Name="StatusPicker"
+                Title="Select New Status"
+                FontSize="Medium"
+                Margin="0,0,0,10">
+            <Picker.Items>
+                <x:String>Watching</x:String>
+                <x:String>Completed</x:String>
+                <x:String>OnHold</x:String>
+               
+            </Picker.Items>
+        </Picker>
+
+        <Entry Placeholder="Review"
+               x:Name="ReviewEntry"
+               FontSize="Medium"
+               Margin="0,0,0,10" />
+
+     <Grid HorizontalOptions="FillAndExpand"
+      Margin="0,20,0,0">
+
+    <Button Text="Edit"
+            FontSize="Large"
+            HorizontalOptions="Start"
+            Padding="30,0,30,0"
+           />
+
+    <Label x:Name="EditCompletedLabel"
+           Text="Edit Completed"
+           FontSize="Medium"
+           TextColor="Green"
+           HorizontalOptions="End"
+           VerticalOptions="Center" />
+
+</Grid>
+
+
+
+        <Button Text="Home Menu"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                
+                Margin="0,20,0,0" />
+
+    </StackLayout>
+</ContentPage>
