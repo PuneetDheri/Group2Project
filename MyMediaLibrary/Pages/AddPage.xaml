@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyMediaLibrary.Pages.AddPage"
+             Title="AddPage">
+    <VerticalStackLayout Padding="20">
+        
+
+        <Label Text="Add New Media"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               Margin="0,20,0,30" />
+
+        <Entry Placeholder="Name"
+               x:Name="NameEntry"
+               FontSize="Medium"
+               Margin="0,0,0,10" />
+
+        <Entry Placeholder="Category"
+               x:Name="CategoryEntry"
+               FontSize="Medium"
+               Margin="0,0,0,10" />
+
+        <Picker x:Name="GenrePicker"
+                Title="Select Genre"
+                FontSize="Medium"
+                Margin="0,0,0,10">
+            <Picker.Items>
+                <x:String>Action</x:String>
+                <x:String>Adventure</x:String>
+                <x:String>Comedy</x:String>
+               
+            </Picker.Items>
+        </Picker>
+
+        <Picker x:Name="StatusPicker"
+                Title="Select Status"
+                FontSize="Medium"
+                Margin="0,0,0,10">
+            <Picker.Items>
+                <x:String>Action</x:String>
+                <x:String>Adventure</x:String>
+                <x:String>Comedy</x:String>
+                <x:String>Drama</x:String>
+                <x:String>Fantasy</x:String>
+                <x:String>Horror</x:String>
+                <x:String>Mystery</x:String>
+                <x:String>Romance</x:String>
+                <x:String>SciFi</x:String>
+                <x:String>Thriller</x:String>
+               
+            </Picker.Items>
+        </Picker>
+
+        <Button  Text="Add Media"
+        FontSize="Large"
+        HorizontalOptions="Center"
+               
+                Margin="0,20,0,0" />
+
+    </VerticalStackLayout>
+</ContentPage>
