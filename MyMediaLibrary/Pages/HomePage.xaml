@@ -77,6 +77,8 @@
             />
 
 
+
+
             </VerticalStackLayout>
 
            <VerticalStackLayout >
@@ -133,6 +135,9 @@
                  Margin="0,0,20,0"
                  
             />
+
+            
+            
 
 
                </HorizontalStackLayout>
