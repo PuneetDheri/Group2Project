@@ -30,11 +30,11 @@ namespace MyMediaLibrary
     public class MediaItem
 	{
         //used protected to allow subclasses to modify the properties
-        protected string Title { get; set; }
-        protected TimeSpan Duration { get; set; }
-        protected DateTime ReleaseDate { get; set; }
-        protected MediaGenre Genre { get; set; }
-        protected MediaStatus Status { get; set; }
+        public string Title { get; set; }
+        public TimeSpan Duration { get; set; }
+        public DateTime ReleaseDate { get; set; }
+        public MediaGenre Genre { get; set; }
+        public MediaStatus Status { get; set; }
 
         public string GetTitle()
         {
@@ -45,17 +45,19 @@ namespace MyMediaLibrary
         {
             return Genre;
         }
-
-
-        public void SetTitle(string newTitle) {
-
-            Title = newTitle;
-
-        }
+       
 
         public MediaStatus GetStatus() {
 
             return Status;
+
+        }
+
+
+        public void SetTitle(string newTitle)
+        {
+
+            Title = newTitle;
 
         }
 
