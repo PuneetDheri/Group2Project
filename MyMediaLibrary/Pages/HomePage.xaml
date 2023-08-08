@@ -38,7 +38,7 @@
                     <DataTemplate>
                         <TextCell
 
-                            Text="{Binding title}"
+                            Text="{Binding Title}"
 
                             />
 

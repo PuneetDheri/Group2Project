@@ -20,6 +20,8 @@ public partial class HomePage : ContentPage
 
 		_mediaLibrary.AddMedia("Test", TimeSpan.FromHours(1), new DateTime(2023, 8, 15), MediaGenre.Drama, MediaStatus.PlanToWatch);
 
+        BindingContext = this;
+
     }
 
 }

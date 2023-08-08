@@ -73,6 +73,12 @@ namespace MyMediaLibrary
             Genre = genre;
             Status = status;
         }
+
+        public override string ToString()
+        {
+            return $"{Title}, {Duration}, {ReleaseDate},{Genre}";
+        }
+
     }
 }
 

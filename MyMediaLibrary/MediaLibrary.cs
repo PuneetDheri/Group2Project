@@ -3,7 +3,9 @@ namespace MyMediaLibrary
 {
 	public class MediaLibrary
 	{
-		private List<MediaItem> mediaItems; //stores list of Media Items
+        private List<MediaItem> mediaItems; //stores list of Media Items
+
+        public List<MediaItem> MediaItems { get { return mediaItems; } }
 
      
 
