@@ -7,6 +7,8 @@
 
     <VerticalStackLayout  Margin="50,20,50,20">
 
+          
+        
         <Label
             x:Name="UserLabel"
              Text="Welcome User"
@@ -30,6 +32,22 @@
 
 
             />
+
+        <ListView ItemsSource="{Binding MediaLibrary.MediaItems}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell
+
+                            Text="{Binding title}"
+
+                            />
+
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
 
 
 
@@ -77,13 +95,16 @@
             />
 
 
-
+            
+            
 
             </VerticalStackLayout>
 
            <VerticalStackLayout >
 
                <HorizontalStackLayout HorizontalOptions="Center" >
+
+
 
                     <Button
             x:Name="AllMediaButton"
@@ -136,8 +157,9 @@
                  
             />
 
-            
-            
+          
+
+
 
 
                </HorizontalStackLayout>

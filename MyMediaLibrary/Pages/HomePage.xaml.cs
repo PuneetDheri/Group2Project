@@ -3,21 +3,11 @@
 public partial class HomePage : ContentPage
 {
 	//establishing data 
-	MediaLibrary _mediaLibrary;
+	MediaLibrary _mediaLibrary = new MediaLibrary();
 
+    public MediaLibrary MediaLibrary { get { return _mediaLibrary; } }
 
-	//onproperty change
-	public MediaLibrary MediaLibrary
-	{
-		get { return _mediaLibrary; }
-		set
-		{
-			if (_mediaLibrary == value) { return; }
-			_mediaLibrary = value;
-			OnPropertyChanged();
-		}
-	}
-
+	
 
     string _name;
 
@@ -27,6 +17,8 @@ public partial class HomePage : ContentPage
         _name = userName;
 
         UserLabel.Text = $"Welcome! {_name}";
+
+		_mediaLibrary.AddMedia("Test", TimeSpan.FromHours(1), new DateTime(2023, 8, 15), MediaGenre.Drama, MediaStatus.PlanToWatch);
 
     }
 
