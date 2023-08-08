@@ -11,8 +11,8 @@
                HorizontalOptions="Center"
                Margin="0,20,0,30" />
 
-        <Entry Placeholder="Name"
-               x:Name="NameEntry"
+        <Entry Placeholder="Title"
+               x:Name="TitleEntry"
                FontSize="Medium"
                Margin="0,0,0,10" />
 
@@ -21,20 +21,19 @@
                FontSize="Medium"
                Margin="0,0,0,10" />
 
+        <Label Text="Select Duration"
+               FontSize="Medium"
+               HorizontalOptions="Start"
+               Margin="0,20,0,30" />
+
+        <TimePicker x:Name="DurationPicker"
+                   
+                    FontSize="Medium"
+                    Margin="0,0,0,10" />
+
+
         <Picker x:Name="GenrePicker"
                 Title="Select Genre"
-                FontSize="Medium"
-                Margin="0,0,0,10">
-            <Picker.Items>
-                <x:String>Action</x:String>
-                <x:String>Adventure</x:String>
-                <x:String>Comedy</x:String>
-               
-            </Picker.Items>
-        </Picker>
-
-        <Picker x:Name="StatusPicker"
-                Title="Select Status"
                 FontSize="Medium"
                 Margin="0,0,0,10">
             <Picker.Items>
@@ -52,11 +51,27 @@
             </Picker.Items>
         </Picker>
 
+        <Picker x:Name="StatusPicker"
+                Title="Select Status"
+                FontSize="Medium"
+                Margin="0,0,0,10">
+            <Picker.Items>
+                <x:String>Completed</x:String>
+                <x:String>Currently Watching</x:String>
+                <x:String>On Hold</x:String>
+                <x:String>Dropped</x:String>
+                
+               
+            </Picker.Items>
+        </Picker>
+
         <Button  Text="Add Media"
         FontSize="Large"
         HorizontalOptions="Center"
                
-                Margin="0,20,0,0" />
+                Margin="0,20,0,0"
+                 Clicked="OnAddMediaClicked"
+                 />
 
     </VerticalStackLayout>
 </ContentPage>

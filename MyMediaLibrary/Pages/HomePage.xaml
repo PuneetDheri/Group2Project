@@ -128,8 +128,10 @@
                  <Button
             x:Name="AddButton"
             Text="Add"
+
             VerticalOptions="Start" 
             HorizontalOptions="Start"
+                     Clicked="OnAddMediaButtonClicked"
                
                 Margin="0,20,0,0"
             />
