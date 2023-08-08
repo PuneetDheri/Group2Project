@@ -136,14 +136,15 @@
                 Margin="0,20,0,0"
             />
 
-                 <Button
-            x:Name="EditButton"
-            Text="Edit"
-           VerticalOptions="Start" 
-            HorizontalOptions="Start"
-               
-                Margin="0,20,0,0"
-            />
+                <Button
+    x:Name="EditButton"
+    Text="Edit"
+    VerticalOptions="Start" 
+    HorizontalOptions="Start"
+    Clicked="OnEditButtonClicked" 
+    Margin="0,20,0,0"
+/>
+
 
 
             

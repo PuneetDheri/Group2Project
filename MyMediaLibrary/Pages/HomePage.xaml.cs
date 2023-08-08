@@ -33,4 +33,10 @@ public partial class HomePage : ContentPage
         AddPage addPage = new AddPage(_mediaLibrary);
         await Navigation.PushAsync(addPage);
     }
+
+    async void OnEditButtonClicked(object sender, EventArgs e)
+    {
+        EditPage editPage = new EditPage();
+        await Navigation.PushAsync(editPage);
+    }
 }
