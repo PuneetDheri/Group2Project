@@ -21,8 +21,7 @@ public partial class AddPage : ContentPage
         MediaGenre genre = (MediaGenre)Enum.Parse(typeof(MediaGenre), GenrePicker.SelectedItem.ToString());
         MediaStatus status = (MediaStatus)Enum.Parse(typeof(MediaStatus), StatusPicker.SelectedItem.ToString());
 
-        _mediaLibrary.AddMedia(title, duration, DateTime.Now, genre, status);
-
+        _mediaLibrary.AddMedia(title, duration, DateTime.Now, genre, status);     
         Navigation.PopAsync(); // go back (HomePage)
     }
 
