@@ -117,12 +117,13 @@
 
                  <Button
             x:Name="DropButton"
-            Text="Drop"
-            VerticalOptions="Start" 
+            Text="Drop Media"
+            VerticalOptions="Start"
             HorizontalOptions="Start"
-               
-                Margin="0,20,0,0"
+            Clicked="OnDropButtonClicked"
+            Margin="0,20,0,0"
             />
+
 
 
                  <Button

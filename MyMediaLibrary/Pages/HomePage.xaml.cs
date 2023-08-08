@@ -39,4 +39,11 @@ public partial class HomePage : ContentPage
         EditPage editPage = new EditPage();
         await Navigation.PushAsync(editPage);
     }
+
+    private async void OnDropButtonClicked(object sender, EventArgs e)
+    {
+        DropPage dropPage = new DropPage();
+        await Navigation.PushAsync(dropPage);
+    }
+
 }
