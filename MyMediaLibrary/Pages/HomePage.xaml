@@ -110,7 +110,7 @@
             Text="Search"
             VerticalOptions="Start" 
             HorizontalOptions="Start"
-               
+                Clicked="SearchButtonClicked"
                 Margin="0,20,0,0"
             />
 

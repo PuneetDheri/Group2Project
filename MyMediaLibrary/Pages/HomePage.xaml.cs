@@ -28,6 +28,9 @@ public partial class HomePage : ContentPage
 
     }
 
+
+
+
     async void OnAddMediaButtonClicked(System.Object sender, System.EventArgs e)
     {
         AddPage addPage = new AddPage(_mediaLibrary);
@@ -46,4 +49,9 @@ public partial class HomePage : ContentPage
         await Navigation.PushAsync(dropPage);
     }
 
+    private async void SearchButtonClicked(System.Object sender, System.EventArgs e)
+    {
+        SearchPage searchPage = new SearchPage(_mediaLibrary);
+        await Navigation.PushAsync(searchPage);
+    }
 }

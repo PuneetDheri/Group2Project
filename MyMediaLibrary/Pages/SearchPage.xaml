@@ -20,6 +20,14 @@
             />
 
 
+        <Button
+            x:Name="SearchButton"
+            VerticalOptions="Center"
+            HorizontalOptions="StartAndExpand"
+            Text="Search"
+            Clicked="OnSearchButton"
+
+            />
 
 
 
@@ -29,7 +37,22 @@
             HorizontalOptions="StartAndExpand"
             Text="Home"
             Grid.Column="3"
+            Clicked="OnHomePage"
             
+
+            />
+
+        <Label
+            x:Name="SearchOutcomeLabel"
+            Text="You have not searched anything yet"
+            HorizontalOptions="Center"
+
+            />
+
+        <Label
+            x:Name="TitleSearchLabel"
+            Text=""
+            HorizontalOptions="Center"
 
             />
 
