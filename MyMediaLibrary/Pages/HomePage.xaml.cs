@@ -43,9 +43,10 @@ public partial class HomePage : ContentPage
 
     async void OnEditButtonClicked(object sender, EventArgs e)
     {
-        EditPage editPage = new EditPage();
+        EditPage editPage = new EditPage(_mediaLibrary); 
         await Navigation.PushAsync(editPage);
     }
+
 
     private async void OnDropButtonClicked(object sender, EventArgs e)
     {

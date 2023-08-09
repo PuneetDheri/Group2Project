@@ -2,64 +2,51 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyMediaLibrary.Pages.EditPage"
-             Title="EditPage">
+             Title="Edit Media">
 
+    <VerticalStackLayout Padding="20">
 
+        <Label Text="Select Media to Edit"
+               FontSize="Large" 
+               HorizontalOptions="CenterAndExpand"/>
 
-        <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
+        <ListView x:Name="MediaList" ItemSelected="OnItemSelected">
+           
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding Title}" FontAttributes="Bold" />
+                <Label Text="{Binding Duration}" />
+                
+            </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
-        <Label Text="Edit Media"
-               FontSize="Large"
-               HorizontalOptions="Center"
-               Margin="0,0,0,20" />
-
-        <Entry Placeholder="New Name"
-               x:Name="NewNameEntry"
-               FontSize="Medium"
-               Margin="0,0,0,10" />
-
-        <Picker x:Name="StatusPicker"
-                Title="Select New Status"
-                FontSize="Medium"
-                Margin="0,0,0,10">
+        <Entry x:Name="TitleEntry" Placeholder="Title" />
+        <Entry x:Name="DurationEntry" Placeholder="Duration" />
+        <DatePicker x:Name="ReleaseDatePicker" />
+        <Picker x:Name="GenrePicker">
             <Picker.Items>
-                <x:String>Watching</x:String>
+                <x:String>Action</x:String>
+                <x:String>Drama</x:String>
+                <x:String>SciFi</x:String>
+                <x:String>Comedy</x:String>
+               
+            </Picker.Items>
+        </Picker>
+        <Picker x:Name="StatusPicker">
+            <Picker.Items>
+                <x:String>PlanToWatch</x:String>
+                <x:String>Dropped</x:String>
                 <x:String>Completed</x:String>
-                <x:String>OnHold</x:String>
                
             </Picker.Items>
         </Picker>
 
-        <Entry Placeholder="Review"
-               x:Name="ReviewEntry"
-               FontSize="Medium"
-               Margin="0,0,0,10" />
+        <Button Text="Save Changes" Clicked="OnSaveChanges" />
 
-     <Grid HorizontalOptions="FillAndExpand"
-      Margin="0,20,0,0">
-
-    <Button Text="Edit"
-            FontSize="Large"
-            HorizontalOptions="Start"
-            Padding="30,0,30,0"
-           />
-
-    <Label x:Name="EditCompletedLabel"
-           Text="Edit Completed"
-           FontSize="Medium"
-           TextColor="Green"
-           HorizontalOptions="End"
-           VerticalOptions="Center" />
-
-</Grid>
-
-
-
-        <Button Text="Home Menu"
-                FontSize="Large"
-                HorizontalOptions="Center"
-                
-                Margin="0,20,0,0" />
-
-    </StackLayout>
+    </VerticalStackLayout>
 </ContentPage>
