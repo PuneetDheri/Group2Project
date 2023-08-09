@@ -10,14 +10,12 @@
 
         
         <Label 
-            Text=" Drop Media"
-            FontAttributes="Bold"
+            Text="Drop Media"
             FontSize="50"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
-             BackgroundColor="Navy"
-            TextColor="Beige"
               Margin="0,50,0,100"
+            Style="{StaticResource HeaderlabelStyle}"
             />
 
         <Entry

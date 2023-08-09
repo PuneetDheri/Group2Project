@@ -23,12 +23,12 @@
 
         <Label 
             Text="My Media Library"
-            FontAttributes="Bold"
-            FontSize="48"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             Margin="0,50,0,50"
-                BackgroundColor="DarkBlue"
+            FontSize="Large"
+            Style="{StaticResource HeaderlabelStyle}"
+                
 
 
             />

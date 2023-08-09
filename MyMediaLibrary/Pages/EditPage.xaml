@@ -8,7 +8,8 @@
 
         <Label Text="Select Media to Edit"
                FontSize="Large" 
-               HorizontalOptions="CenterAndExpand"/>
+               HorizontalOptions="CenterAndExpand"
+               Style="{StaticResource HeaderlabelStyle}"/>
 
         <ListView x:Name="MediaList" ItemSelected="OnItemSelected">
            
