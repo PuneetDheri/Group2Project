@@ -22,13 +22,20 @@ public partial class SearchPage : ContentPage
 
     void OnSearchButton(System.Object sender, System.EventArgs e)
     {
-        string title = SearchBarEntry.Text;
-        var searchResults = _mediaLibrary.SearchByTitle(title);
+
+        try
+        {
+            string title = SearchBarEntry.Text;
+            var searchResults = _mediaLibrary.SearchByTitle(title);
 
 
 
-        SearchResultsListView.ItemsSource = searchResults;
-
+            SearchResultsListView.ItemsSource = searchResults;
+        }
+        catch (Exception ex)
+        {
+            DisplayAlert("INFO", "Invalid try again", "Ok");
+        }
        
 
     }
