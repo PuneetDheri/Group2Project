@@ -8,7 +8,7 @@
             Text="Welcome User! (Input your name and email)"
             FontSize="Large"
             HorizontalOptions="Center"
-            BackgroundColor="DeepSkyBlue"
+            Style="{StaticResource HeaderlabelStyle}"
             />
 
         <Entry
