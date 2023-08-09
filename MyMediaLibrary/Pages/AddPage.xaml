@@ -37,33 +37,12 @@
                 Title="Select Genre"
                 FontSize="Medium"
                 Margin="0,0,0,10">
-            <Picker.Items>
-                <x:String>Action</x:String>
-                <x:String>Adventure</x:String>
-                <x:String>Comedy</x:String>
-                <x:String>Drama</x:String>
-                <x:String>Fantasy</x:String>
-                <x:String>Horror</x:String>
-                <x:String>Mystery</x:String>
-                <x:String>Romance</x:String>
-                <x:String>SciFi</x:String>
-                <x:String>Thriller</x:String>
-               
-            </Picker.Items>
         </Picker>
 
         <Picker x:Name="StatusPicker"
                 Title="Select Status"
                 FontSize="Medium"
                 Margin="0,0,0,10">
-            <Picker.Items>
-                <x:String>Completed</x:String>
-                <x:String>Currently Watching</x:String>
-                <x:String>On Hold</x:String>
-                <x:String>Dropped</x:String>
-                
-               
-            </Picker.Items>
         </Picker>
 
         <Button  Text="Add Media"

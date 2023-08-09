@@ -1,13 +1,16 @@
-﻿namespace MyMediaLibrary.Pages;
+﻿using System.Collections.ObjectModel;
+
+namespace MyMediaLibrary.Pages;
 
 public partial class HomePage : ContentPage
 {
-	//establishing data 
-	MediaLibrary _mediaLibrary = new MediaLibrary();
 
-    public MediaLibrary MediaLibrary { get { return _mediaLibrary; } }
 
-	
+    //establishing data 
+    MediaLibrary _mediaLibrary = new MediaLibrary();
+    public MediaLibrary UsersMediaLibrary { get { return _mediaLibrary; } }
+
+
 
     string _name;
 
@@ -18,7 +21,7 @@ public partial class HomePage : ContentPage
 
         UserLabel.Text = $"Welcome! {_name}";
 
-		_mediaLibrary.AddMedia("Test1", TimeSpan.FromHours(1),  DateTime.Now, MediaGenre.Drama, MediaStatus.PlanToWatch);
+        _mediaLibrary.AddMedia("Test1", TimeSpan.FromHours(1),  DateTime.Now, MediaGenre.Drama, MediaStatus.PlanToWatch);
         _mediaLibrary.AddMedia("Test2", TimeSpan.FromHours(1), DateTime.Now, MediaGenre.Drama, MediaStatus.PlanToWatch);
         _mediaLibrary.AddMedia("Test3", TimeSpan.FromHours(1), DateTime.Now, MediaGenre.Drama, MediaStatus.PlanToWatch);
         _mediaLibrary.AddMedia("Test4", TimeSpan.FromHours(1), DateTime.Now, MediaGenre.Drama, MediaStatus.PlanToWatch);

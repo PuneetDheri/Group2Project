@@ -10,11 +10,20 @@
     </Style>
 
     <Style TargetType="Label" x:Key="HeaderlabelStyle" BasedOn="{StaticResource CommonlabelStyle}">
-        <Setter Property="TextColor" Value="Purple"/>
-        <Setter Property="BackgroundColor" Value="White"/>
+        <Setter Property="TextColor" Value="Black"/>
+        <Setter Property="BackgroundColor" Value="Turquoise"/>
         <Setter Property="HorizontalOptions" Value="End"/>
+        <Setter Property="Margin" Value="10"/>
+
     </Style>
 
+     <Style TargetType="Button" x:Key="ButtonStyle" >
+        <Setter Property="TextColor" Value="Purple"/>
+        <Setter Property="BackgroundColor" Value="White"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="Margin" Value="10"/>
+
+    </Style>
 
 
 
