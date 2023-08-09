@@ -1,19 +1,26 @@
 ﻿using System;
+using System.Collections.ObjectModel;
+
 namespace MyMediaLibrary
 {
 	public class MediaLibrary
 	{
-        private List<MediaItem> mediaItems; //stores list of Media Items
+        private ObservableCollection<MediaItem> mediaItems; //stores list of Media Items
 
-        public List<MediaItem> MediaItems { get { return mediaItems; } }
+        public ObservableCollection<MediaItem> MediaItems { get { return mediaItems; } }
 
-     
 
-		public MediaLibrary() //constructer called when  new instace of MediaLibrary is created
+
+
+        public MediaLibrary() //constructer called when  new instace of MediaLibrary is created
 		{
-			mediaItems = new List<MediaItem>();
+			mediaItems = new ObservableCollection<MediaItem>(); 
 		}
 
+        public void AddMedia(MediaItem mediaItem)
+        {
+            mediaItems.Add(mediaItem);
+        }
         public void AddMedia(string title, TimeSpan duration, DateTime releaseDate, MediaGenre genre, MediaStatus status)
         {
 
