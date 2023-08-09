@@ -9,6 +9,9 @@ public partial class SearchPage : ContentPage
 	{
 		_mediaLibrary = mediaLibrary;
 
+
+        BindingContext = this;
+
 		InitializeComponent();
 	}
 
@@ -20,24 +23,13 @@ public partial class SearchPage : ContentPage
     void OnSearchButton(System.Object sender, System.EventArgs e)
     {
         string title = SearchBarEntry.Text;
-
-        try
-        {
-            _mediaLibrary.SearchByTitle(title);
-
-            
-
-            
-            
-
-        }
-        catch (Exception ex)
-        {
-            DisplayAlert("INFO", "invalid try again", "okay");
-            
-        }
+        var searchResults = _mediaLibrary.SearchByTitle(title);
 
 
+
+        SearchResultsListView.ItemsSource = searchResults;
+
+       
 
     }
 

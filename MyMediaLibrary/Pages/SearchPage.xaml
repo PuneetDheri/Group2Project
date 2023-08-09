@@ -49,12 +49,30 @@
 
             />
 
-        <Label
-            x:Name="TitleSearchLabel"
-            Text=""
-            HorizontalOptions="Center"
+        <ListView
+            Margin="10"
+            x:Name="SearchResultsListView"
 
-            />
+            ItemsSource="{Binding searchResults}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+                    <ViewCell>
+                        <HorizontalStackLayout Spacing="10">
+                            <Label Text="{Binding Title}"/>
+
+                        </HorizontalStackLayout>
+
+                    </ViewCell>
+
+
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+
+
+
+        </ListView>
 
 
     </VerticalStackLayout>
