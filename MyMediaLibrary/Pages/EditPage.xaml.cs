@@ -36,7 +36,7 @@ namespace MyMediaLibrary.Pages
                 _selectedItem.ReleaseDate = ReleaseDatePicker.Date;
                 _selectedItem.Genre = (MediaGenre)Enum.Parse(typeof(MediaGenre), GenrePicker.SelectedItem.ToString());
                 _selectedItem.Status = (MediaStatus)Enum.Parse(typeof(MediaStatus), StatusPicker.SelectedItem.ToString());
-
+                Navigation.PopAsync();
             }
         }
     }
