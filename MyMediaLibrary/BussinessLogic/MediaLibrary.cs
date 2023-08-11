@@ -33,21 +33,18 @@ namespace MyMediaLibrary
         }
 
 
-        public bool RemoveMedia(string title)
+        public bool RemoveMediaByTitle(string title)
         {
-
-            foreach (MediaItem mediaItem in mediaItems)
+            var mediaToRemove = MediaItems.FirstOrDefault(m => m.Title.Equals(title, StringComparison.OrdinalIgnoreCase));
+            if (mediaToRemove != null)
             {
-                if (mediaItem.GetTitle().ToLower() == title.ToLower()) //converting to lowercase to ignore case senstivity
-                {
-                    mediaItems.Remove(mediaItem);
-                    return true; //media removed successfully
-                }
+                MediaItems.Remove(mediaToRemove);
+                return true;
             }
+            return false;
 
-
-            return false; //media with title not found in list
         }
+
 
         public bool EditMedia(string title, string newTitle, MediaStatus newStatus ) {
 

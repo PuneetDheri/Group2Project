@@ -2,54 +2,48 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyMediaLibrary.Pages.DropPage"
-             Title="DropPage">
+             Title="Drop Media Item">
 
+    <VerticalStackLayout Padding="30">
 
-
-    <VerticalStackLayout  Margin="50,20,50,20">
-
-        
         <Label 
-            Text="Drop Media"
-            FontSize="50"
-            VerticalOptions="Center" 
+            Text="Enter the title of the media item to search:"
             HorizontalOptions="Center"
-              Margin="0,50,0,100"
-            Style="{StaticResource HeaderlabelStyle}"
-            />
+            Style="{StaticResource HeaderlabelStyle}" />
 
         <Entry
-            x:Name="MediaToBeDropped"
-            Placeholder="Enter name of Media to be dropped:"
-           Style="{StaticResource EntryStyle}"
-            />
+            x:Name="TitleEntry"
+            Placeholder="Enter media title"
+            HorizontalOptions="FillAndExpand"
+            Style="{StaticResource EntryStyle}" />
 
-        <Label 
-            Text=" Match 1 from user's media list"
-            Style="{StaticResource CommonlabelStyle}"
-            />
+        <Button
+            Text="Search"
+            Clicked="OnSearchButtonClicked"
+            HorizontalOptions="Center"
+            Style="{StaticResource ButtonStyle}" />
 
-         <Label 
-            Text=" Match 2 from user's media list"
-             Style="{StaticResource CommonlabelStyle}"
-            />
+        <ListView x:Name="SearchResultsListView"
+                  HeightRequest="150" 
+                  ItemSelected="OnMediaItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
+        <Button
+            Text="Remove Selected Media Item"
+            Clicked="OnDropButtonClicked"
+            HorizontalOptions="Center"
+            Style="{StaticResource ButtonStyle}" />
 
-        <Label 
-            Text=" Match 3 from user's media list"
-             Style="{StaticResource CommonlabelStyle}"
-            />
-
-         <Button
-            x:Name="DropButton"
-            Text="Drop Media"
-            
-             Style="{StaticResource ButtonStyle}"
-            />
-
-
+        <Button
+            x:Name="HomeMenuButton"
+            Text="Home"
+            Clicked="OnHomePage"
+            HorizontalOptions="Center"
+            Style="{StaticResource ButtonStyle}" />
     </VerticalStackLayout>
-
-
-
 </ContentPage>
