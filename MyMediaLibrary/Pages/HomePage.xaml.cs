@@ -50,7 +50,7 @@ public partial class HomePage : ContentPage
 
     private async void OnDropButtonClicked(object sender, EventArgs e)
     {
-        DropPage dropPage = new DropPage();
+        var dropPage = new DropPage(_mediaLibrary);
         await Navigation.PushAsync(dropPage);
     }
 
