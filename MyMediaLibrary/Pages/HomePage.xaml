@@ -17,7 +17,7 @@
             VerticalOptions="Center" 
             HorizontalOptions="Start"
              BackgroundColor="Gray"
-
+            Grid.Row="0"
             />
 
 
@@ -28,136 +28,19 @@
             Margin="0,50,0,50"
             FontSize="Large"
             Style="{StaticResource HeaderlabelStyle}"
-                
+                Grid.Row="1"
 
 
             />
 
 
-        <StackLayout Orientation="Horizontal" Margin="0,10">
-            <Label Text="Title"
-                   FontAttributes="Bold"
-                   HorizontalOptions="FillAndExpand"
-                   />
-
-            <Label Text="Duration"
-                      FontAttributes="Bold"
-                   HorizontalOptions="FillAndExpand"
-                                    />
-
-            <Label Text="Release Date"
-                      FontAttributes="Bold"
-                   HorizontalOptions="FillAndExpand"
-                                    />
-
-            <Label Text="Genre"
-                   FontAttributes="Bold"
-                   HorizontalOptions="FillAndExpand"
-                   />
-
-            <Label Text="Status"
-                   FontAttributes="Bold"
-                   HorizontalOptions="FillAndExpand"
-                   />
-
-
-        </StackLayout>
-
-
-
-
-
-        <ListView  ItemsSource="{Binding UsersMediaLibrary.MediaItems}" 
-                    x:Name="UsersMediaLibraryListView">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-
-
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding Title}"
-                                    HorizontalOptions="FillAndExpand"
-                                 />
-                            <Label Text="{Binding Duration}"
-                                     HorizontalOptions="FillAndExpand"
-                                    />
-                            <Label Text="{Binding ReleaseDate}"
-                                     HorizontalOptions="FillAndExpand"
-                                    />
-                            <Label Text="{Binding Genre}"
-                                    HorizontalOptions="FillAndExpand"
-                                   />
-                            <Label Text="{Binding Status}"
-                                    HorizontalOptions="FillAndExpand"
-                                    />
-
-                        </StackLayout>
-                    </ViewCell>
-
-                </DataTemplate>
-
-            </ListView.ItemTemplate>
-
-        </ListView>
-
-
-        <HorizontalStackLayout HorizontalOptions="Start">
-
-
-            <VerticalStackLayout VerticalOptions="Start">
-
-                <Button
-            x:Name="SearchButton"
-            Text="Search"
-            VerticalOptions="Start" 
-            HorizontalOptions="Start"
-            Clicked="SearchButtonClicked"
-            Margin="0,20,0,0"
-            Style="{StaticResource ButtonStyle}"
-            />
-
-
-                <Button
-            x:Name="DropButton"
-            Text="Drop Media"
-            VerticalOptions="Start"
-            HorizontalOptions="Start"
-            Clicked="OnDropButtonClicked"
-            Margin="0,20,0,0"
-            Style="{StaticResource ButtonStyle}"
-            />
-
-
-
-                <Button
-            x:Name="AddButton"
-            Text="Add"
-            VerticalOptions="Start" 
-            HorizontalOptions="Start"
-            Clicked="OnAddMediaButtonClicked"
-            Margin="0,20,0,0"
-            Style="{StaticResource ButtonStyle}"
-            />
-
-                <Button
-            x:Name="EditButton"
-            Text="Edit"
-            VerticalOptions="Start" 
-            HorizontalOptions="Start"
-            Clicked="OnEditButtonClicked" 
-            Margin="0,20,0,0"
-            Style="{StaticResource ButtonStyle}"
-            />
-
-            </VerticalStackLayout>
-
-            <VerticalStackLayout >
+        <StackLayout  Grid.Row="2">
 
                 <HorizontalStackLayout HorizontalOptions="Center" >
 
 
 
-                <Button
+                    <Button
             x:Name="AllMediaButton"
             Text="All Media"
             VerticalOptions="Center" 
@@ -167,7 +50,7 @@
             Style="{StaticResource ButtonStyle}"
             />
 
-                <Button
+                    <Button
             x:Name="CompletedButton"
             Text="Completed"
             VerticalOptions="Center" 
@@ -177,7 +60,7 @@
             Style="{StaticResource ButtonStyle}"   
             />
 
-                <Button
+                    <Button
             x:Name="CurrentlyWatchingButton"
             Text="Currently Watching"
             VerticalOptions="Center" 
@@ -216,14 +99,146 @@
 
                 </HorizontalStackLayout>
 
+            </StackLayout>
 
 
-            </VerticalStackLayout>
+        <StackLayout  Grid.Row="3" Orientation="Horizontal">
+
+
+        
+           
+           
+
+            
+           
+                <Label Text="Title"
+                       FontAttributes="Bold"
+                      
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                       />
+
+                <Label Text="Duration"
+                          FontAttributes="Bold"
+                      VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                                        />
+
+                <Label Text="Release Date"
+                          FontAttributes="Bold"
+                      VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                                        />
+
+                <Label Text="Genre"
+                       FontAttributes="Bold"
+                      VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                       />
+
+                <Label Text="Status"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                       />
+          
+            
+            
+
+        </StackLayout>
+
+        <ListView Grid.Row="4" 
+            ItemsSource="{Binding UsersMediaLibrary.MediaItems}" 
+                    x:Name="UsersMediaLibraryListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Title}"
+                                    HorizontalOptions="FillAndExpand"
+                                 />
+                            <Label Text="{Binding Duration}"
+                                     HorizontalOptions="FillAndExpand"
+                                    />
+                            <Label Text="{Binding ReleaseDate}"
+                                     HorizontalOptions="FillAndExpand"
+                                    />
+                            <Label Text="{Binding Genre}"
+                                    HorizontalOptions="FillAndExpand"
+                                   />
+                            <Label Text="{Binding Status}"
+                                    HorizontalOptions="FillAndExpand"
+                                    />
+
+                        </StackLayout>
+                    </ViewCell>
+
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+
+        <StackLayout Grid.Row="5"  >
+           
+            <HorizontalStackLayout HorizontalOptions="Center">
+
+
+            
+                <Button
+            x:Name="SearchButton"
+            Text="Search"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Clicked="SearchButtonClicked"
+            Margin="0,0,20,0"
+            Style="{StaticResource ButtonStyle}"
+            />
+
+
+                <Button
+            x:Name="DropButton"
+            Text="Drop Media"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Clicked="OnDropButtonClicked"
+             Margin="0,0,20,0"
+            Style="{StaticResource ButtonStyle}"
+            />
 
 
 
-        </HorizontalStackLayout>
+                <Button
+            x:Name="AddButton"
+            Text="Add"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Clicked="OnAddMediaButtonClicked"
+             Margin="0,0,20,0"
+            Style="{StaticResource ButtonStyle}"
+            />
 
+                <Button
+            x:Name="EditButton"
+            Text="Edit"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Clicked="OnEditButtonClicked" 
+             Margin="0,0,20,0"
+            Style="{StaticResource ButtonStyle}"
+            />
+
+          
+            </HorizontalStackLayout>
+
+
+        </StackLayout>
+
+
+    
 
     </VerticalStackLayout>
 
