@@ -97,7 +97,8 @@ namespace MyMediaLibrary
             //analyzes the list and if it is seen then it adds and returns results
             foreach (MediaItem mediaItem in mediaItems) {
 
-                if(mediaItem.GetTitle().ToLower() == searchTerm.ToLower()) {
+                if (mediaItem.GetTitle().ToLower().Contains(searchTerm.ToLower()))
+                {
                     results.Add(mediaItem);
                 }
 

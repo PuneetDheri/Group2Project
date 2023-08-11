@@ -21,48 +21,29 @@
         <Entry
             x:Name="MediaToBeDropped"
             Placeholder="Enter name of Media to be dropped:"
-            FontSize="40"
+           Style="{StaticResource EntryStyle}"
             />
 
         <Label 
             Text=" Match 1 from user's media list"
-            FontAttributes="Bold"
-            FontSize="40"
-           VerticalOptions="Start" 
-            HorizontalOptions="Start"
-             BackgroundColor="Gray"
-              Margin="0,50,0,0"
+            Style="{StaticResource CommonlabelStyle}"
             />
 
          <Label 
             Text=" Match 2 from user's media list"
-            FontAttributes="Bold"
-            FontSize="40"
-           VerticalOptions="Start" 
-            HorizontalOptions="Start"
-             BackgroundColor="Gray"
-              Margin="0,50,0,0"
+             Style="{StaticResource CommonlabelStyle}"
             />
 
 
         <Label 
             Text=" Match 3 from user's media list"
-            FontAttributes="Bold"
-            FontSize="40"
-           VerticalOptions="Start" 
-            HorizontalOptions="Start"
-             BackgroundColor="Gray"
-              Margin="0,50,0,0"
+             Style="{StaticResource CommonlabelStyle}"
             />
 
          <Button
             x:Name="DropButton"
             Text="Drop Media"
-             FontSize="40"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-               
-                Margin="0,20,0,0"
+            
              Style="{StaticResource ButtonStyle}"
             />
 
