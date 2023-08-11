@@ -10,17 +10,73 @@
                FontSize="Large" 
                HorizontalOptions="CenterAndExpand"
                Style="{StaticResource HeaderlabelStyle}"/>
+        <StackLayout  Grid.Row="3" Orientation="Horizontal">
 
-        <ListView x:Name="MediaList" ItemSelected="OnItemSelected">
+
+        
+           
+           
+
+            
+           
+                <Label Text="Title"
+                       FontAttributes="Bold"
+                      
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                       />
+
+                <Label Text="Duration"
+                          FontAttributes="Bold"
+                      VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                                        />
+
+                <Label Text="Release Date"
+                          FontAttributes="Bold"
+                      VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                                        />
+
+                <Label Text="Genre"
+                       FontAttributes="Bold"
+                      VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                       />
+
+                <Label Text="Status"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                       />
+          
+            
+            
+
+        </StackLayout>
+        <ListView x:Name="MediaList" ItemSelected="OnItemSelected" Grid.Row="4">
            
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
-                <Label Text="{Binding Title}" FontAttributes="Bold" />
-                <Label Text="{Binding Duration}" />
-                
-            </StackLayout>
+                            <Label Text="{Binding Title}"
+                                    HorizontalOptions="FillAndExpand"
+                                 />
+                            <Label Text="{Binding Duration}"
+                                     HorizontalOptions="FillAndExpand"
+                                    />
+                            <Label Text="{Binding ReleaseDate}"
+                                     HorizontalOptions="FillAndExpand"
+                                    />
+                            <Label Text="{Binding Genre}"
+                                    HorizontalOptions="FillAndExpand"
+                                   />
+                            <Label Text="{Binding Status}"
+                                    HorizontalOptions="FillAndExpand"
+                                    />
+
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

@@ -48,6 +48,7 @@
 
         <Label
             x:Name="SearchOutcomeLabel"
+            HeightRequest="150"
             Text="Search"
             HorizontalOptions="Center"
 
