@@ -21,13 +21,6 @@
             Style="{StaticResource EntryStyle}"
             />
 
-        <Entry
-            x:Name="EmailEntry"
-            Placeholder="Input email:"
-            Style="{StaticResource EntryStyle}"
-            
-            />
-
         <Button
             x:Name="EnterButton"
             Text="Enter"
