@@ -10,7 +10,8 @@
         <Label Text="Add New Media"
                FontSize="Large"
                HorizontalOptions="Center"
-               Margin="0,20,0,30" />
+               Margin="0,20,0,30"
+               Style="{StaticResource HeaderlabelStyle}"/>
 
         <Entry Placeholder="Title"
                x:Name="TitleEntry"
@@ -51,6 +52,7 @@
                
                 Margin="0,20,0,0"
                  Clicked="OnAddMediaClicked"
+                 Style="{StaticResource ButtonStyle}"
                  />
 
     </VerticalStackLayout>

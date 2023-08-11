@@ -18,11 +18,13 @@
         <Entry
             x:Name="NameEntry"
             Placeholder="Input name:"
+            Style="{StaticResource EntryStyle}"
             />
 
         <Entry
             x:Name="EmailEntry"
             Placeholder="Input email:"
+            Style="{StaticResource EntryStyle}"
             
             />
 

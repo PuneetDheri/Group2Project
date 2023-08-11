@@ -47,7 +47,7 @@
             </Picker.Items>
         </Picker>
 
-        <Button Text="Save Changes" Clicked="OnSaveChanges" />
+        <Button Text="Save Changes" Clicked="OnSaveChanges" Style="{StaticResource ButtonStyle}" />
 
     </VerticalStackLayout>
 </ContentPage>

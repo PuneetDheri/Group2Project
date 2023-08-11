@@ -34,7 +34,7 @@ public partial class SearchPage : ContentPage
         }
         catch (Exception ex)
         {
-            DisplayAlert("INFO", "Invalid try again", "Ok");
+            DisplayAlert("INFO", ex.Message, "Okay");
         }
        
 

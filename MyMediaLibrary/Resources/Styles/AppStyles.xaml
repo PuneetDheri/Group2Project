@@ -19,12 +19,20 @@
     </Style>
 
 
-
      <Style TargetType="Button" x:Key="ButtonStyle" >
         <Setter Property="TextColor" Value="#85DAFF"/>
         <Setter Property="BackgroundColor" Value="#115B69"/>
         <Setter Property="HorizontalOptions" Value="Center"/>
         <Setter Property="Margin" Value="10"/>
+
+    </Style>
+
+
+
+    <Style TargetType="Entry" x:Key="EntryStyle">
+        <Setter Property="WidthRequest" Value="350"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+
 
     </Style>
 

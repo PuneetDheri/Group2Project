@@ -8,7 +8,8 @@
             Text="What would you like to search for?"
             VerticalOptions="Center" 
             HorizontalOptions="StartAndExpand"
-            FontSize="40"/>
+            FontSize="40"
+            Style="{StaticResource HeaderlabelStyle}"/>
 
         <Entry
             x:Name="SearchBarEntry"
@@ -17,6 +18,7 @@
             Placeholder="Search for anything!"
             WidthRequest="600"
             FontSize="20"
+            Style="{StaticResource EntryStyle}"
             />
 
 
@@ -26,6 +28,7 @@
             HorizontalOptions="StartAndExpand"
             Text="Search"
             Clicked="OnSearchButton"
+            Style="{StaticResource ButtonStyle}"
 
             />
 
@@ -38,6 +41,7 @@
             Text="Home"
             Grid.Column="3"
             Clicked="OnHomePage"
+            Style="{StaticResource ButtonStyle}"
             
 
             />

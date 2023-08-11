@@ -111,8 +111,9 @@
             Text="Search"
             VerticalOptions="Start" 
             HorizontalOptions="Start"
-                Clicked="SearchButtonClicked"
-                Margin="0,20,0,0"
+            Clicked="SearchButtonClicked"
+            Margin="0,20,0,0"
+            Style="{StaticResource ButtonStyle}"
             />
 
 
@@ -123,6 +124,7 @@
             HorizontalOptions="Start"
             Clicked="OnDropButtonClicked"
             Margin="0,20,0,0"
+            Style="{StaticResource ButtonStyle}"
             />
 
 
@@ -130,27 +132,22 @@
                 <Button
             x:Name="AddButton"
             Text="Add"
-
             VerticalOptions="Start" 
             HorizontalOptions="Start"
-                     Clicked="OnAddMediaButtonClicked"
-               
-                Margin="0,20,0,0"
+            Clicked="OnAddMediaButtonClicked"
+            Margin="0,20,0,0"
+            Style="{StaticResource ButtonStyle}"
             />
 
                 <Button
-    x:Name="EditButton"
-    Text="Edit"
-    VerticalOptions="Start" 
-    HorizontalOptions="Start"
-    Clicked="OnEditButtonClicked" 
-    Margin="0,20,0,0"
-/>
-
-
-
-
-
+            x:Name="EditButton"
+            Text="Edit"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start"
+            Clicked="OnEditButtonClicked" 
+            Margin="0,20,0,0"
+            Style="{StaticResource ButtonStyle}"
+            />
 
             </VerticalStackLayout>
 
@@ -160,43 +157,44 @@
 
 
 
-                    <Button
+                <Button
             x:Name="AllMediaButton"
             Text="All Media"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
-                Grid.Column="0"
-                Margin="100,0,20,0"
+            Grid.Column="0"
+            Margin="100,0,20,0"
+            Style="{StaticResource ButtonStyle}"
             />
 
-                    <Button
+                <Button
             x:Name="CompletedButton"
             Text="Completed"
-                VerticalOptions="Center" 
+            VerticalOptions="Center" 
             HorizontalOptions="Center"
-                Grid.Column="1"
-                Margin="0,0,20,0"
-               
+            Grid.Column="1"
+            Margin="0,0,20,0"
+            Style="{StaticResource ButtonStyle}"   
             />
 
-                    <Button
+                <Button
             x:Name="CurrentlyWatchingButton"
             Text="Currently Watching"
-                VerticalOptions="Center" 
+            VerticalOptions="Center" 
             HorizontalOptions="Center"
-                Grid.Column="2"
-                Margin="0,0,20,0"
-                
+            Grid.Column="2"
+            Margin="0,0,20,0"
+            Style="{StaticResource ButtonStyle}"    
             />
 
                     <Button
             x:Name="PlanToWatchButton"
             Text="Plan to Watch"
-                 VerticalOptions="Center" 
+            VerticalOptions="Center" 
             HorizontalOptions="Center"
-                Grid.Column="3"
-                 Margin="0,0,20,0"
-                
+            Grid.Column="3"
+            Margin="0,0,20,0"
+            Style="{StaticResource ButtonStyle}"    
             />
 
 
@@ -204,11 +202,11 @@
                     <Button
             x:Name="DroppedButton"
             Text="Dropped"
-                 VerticalOptions="Center" 
+            VerticalOptions="Center" 
             HorizontalOptions="Center"
-                Grid.Column="4"
-                 Margin="0,0,20,0"
-                 
+            Grid.Column="4"
+            Margin="0,0,20,0"
+            Style="{StaticResource ButtonStyle}"     
             />
 
 
