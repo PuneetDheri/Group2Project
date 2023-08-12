@@ -58,9 +58,11 @@
 	<ItemGroup>
 	  <None Remove="Pages\" />
 	  <None Remove="BussinessLogic\" />
+	  <None Remove="DataAccess\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Pages\" />
 	  <Folder Include="BussinessLogic\" />
+	  <Folder Include="DataAccess\" />
 	</ItemGroup>
 </Project>
