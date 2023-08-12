@@ -29,12 +29,7 @@
             Style="{StaticResource ButtonStyle}"
             />
 
-        <Button
-            x:Name="CreateAccountButton"
-            Text="Create new account"
-            WidthRequest="200"
-            Style="{StaticResource ButtonStyle}"
-            />
+        
 
 
     </VerticalStackLayout>
