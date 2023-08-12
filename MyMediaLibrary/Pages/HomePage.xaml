@@ -40,61 +40,7 @@
 
 
 
-                    <Button
-            x:Name="AllMediaButton"
-            Text="All Media"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            Grid.Column="0"
-            Margin="100,0,20,0"
-            Style="{StaticResource ButtonStyle}"
-            />
-
-                    <Button
-            x:Name="CompletedButton"
-            Text="Completed"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            Grid.Column="1"
-            Margin="0,0,20,0"
-            Style="{StaticResource ButtonStyle}"   
-            />
-
-                    <Button
-            x:Name="CurrentlyWatchingButton"
-            Text="Currently Watching"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            Grid.Column="2"
-            Margin="0,0,20,0"
-            Style="{StaticResource ButtonStyle}"    
-            />
-
-                    <Button
-            x:Name="PlanToWatchButton"
-            Text="Plan to Watch"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            Grid.Column="3"
-            Margin="0,0,20,0"
-            Style="{StaticResource ButtonStyle}"    
-            />
-
-
-
-                    <Button
-            x:Name="DroppedButton"
-            Text="Dropped"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            Grid.Column="4"
-            Margin="0,0,20,0"
-            Style="{StaticResource ButtonStyle}"     
-            />
-
-
-
-
+          
 
 
                 </HorizontalStackLayout>
