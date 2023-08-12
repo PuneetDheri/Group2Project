@@ -21,7 +21,11 @@ public partial class AddPage : ContentPage
     void OnAddMediaClicked(System.Object sender, System.EventArgs e)
     {
         string title = TitleEntry.Text;
-        TimeSpan duration = DurationPicker.Time;
+
+        int minutes = int.Parse(DurationPicker.Text);
+        int hours = minutes / 60;
+
+        TimeSpan duration = new TimeSpan(hours, minutes % 60, 0);
         MediaGenre genre = (MediaGenre)Enum.Parse(typeof(MediaGenre), GenrePicker.SelectedItem.ToString());
         MediaStatus status = (MediaStatus)Enum.Parse(typeof(MediaStatus), StatusPicker.SelectedItem.ToString());
 

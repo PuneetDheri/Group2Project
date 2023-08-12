@@ -23,16 +23,15 @@
                FontSize="Medium"
                Margin="0,0,0,10" />
 
-        <Label Text="Select Duration"
+        <Label Text="Duration in minutes"
                FontSize="Medium"
                HorizontalOptions="Start"
                Margin="0,20,0,30" />
 
-        <TimePicker x:Name="DurationPicker"
-                   
+        <Entry x:Name="DurationPicker"
                     FontSize="Medium"
                     Margin="0,0,0,10" />
-
+ 
 
         <Picker x:Name="GenrePicker"
                 Title="Select Genre"

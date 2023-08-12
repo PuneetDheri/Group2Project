@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using MyMediaLibrary.DataAccess;
 
 namespace MyMediaLibrary
 {
@@ -8,19 +9,53 @@ namespace MyMediaLibrary
         private ObservableCollection<MediaItem> mediaItems; //stores list of Media Items
 
         public ObservableCollection<MediaItem> MediaItems { get { return mediaItems; } }
+        IDataAccessManager dataAccessManager = new JsonAccessManager();
+
 
 
 
 
         public MediaLibrary() //constructer called when  new instace of MediaLibrary is created
 		{
-			mediaItems = new ObservableCollection<MediaItem>(); 
+			mediaItems = new ObservableCollection<MediaItem>();
+            Collection<MediaItem> medias = GetInitialMediaItemList();
+
+            foreach (MediaItem item in medias)
+            {
+                mediaItems.Add(item);
+            }
 		}
+
+        public Collection<MediaItem> GetInitialMediaItemList()
+        {
+            Collection<MediaItem> items = dataAccessManager.Read();
+            if(items.Count > 0)
+            {
+                return items;
+            }
+            else
+            {
+                Collection<MediaItem> initialList = new Collection<MediaItem>
+                {
+                    new MediaItem("AOT", TimeSpan.FromHours(27), DateTime.Now.AddMonths(-23).AddDays(-22), MediaGenre.Fantasy, MediaStatus.Completed),
+                    new MediaItem("FMAB", TimeSpan.FromHours(18), DateTime.Now.AddMonths(-12).AddDays(-22), MediaGenre.Fantasy, MediaStatus.Watching),
+                    new MediaItem("Dr Stone", TimeSpan.FromHours(3), DateTime.Now.AddYears(-1).AddDays(-2), MediaGenre.Adventure, MediaStatus.PlanToWatch),
+                    new MediaItem("Spy x Family", TimeSpan.FromHours(13), DateTime.Now.AddYears(-1).AddDays(-2), MediaGenre.Comedy, MediaStatus.OnHold),
+                    new MediaItem("ChainsawPerson", TimeSpan.FromHours(13), DateTime.Now.AddMonths(-41).AddDays(-22), MediaGenre.Comedy, MediaStatus.Dropped)
+                };
+                dataAccessManager.Save(initialList);
+                return initialList;
+            }
+        }
+
+
 
         public void AddMedia(MediaItem mediaItem)
         {
             mediaItems.Add(mediaItem);
+            dataAccessManager.Save(this.MediaItems);
         }
+
         public void AddMedia(string title, TimeSpan duration, DateTime releaseDate, MediaGenre genre, MediaStatus status)
         {
 
@@ -39,6 +74,8 @@ namespace MyMediaLibrary
             if (mediaToRemove != null)
             {
                 MediaItems.Remove(mediaToRemove);
+                dataAccessManager.Save(this.MediaItems);
+
                 return true;
             }
             return false;
@@ -57,6 +94,7 @@ namespace MyMediaLibrary
 
                     mediaItem.SetTitle(newTitle);
                     mediaItem.SetStatus(newStatus);
+                    dataAccessManager.Save(this.MediaItems);
 
                     return true;
                    
@@ -127,6 +165,8 @@ namespace MyMediaLibrary
             {
                 mediaItems.Remove(playlistItem);
             }
+            dataAccessManager.Save(this.MediaItems);
+
         }
 
     }

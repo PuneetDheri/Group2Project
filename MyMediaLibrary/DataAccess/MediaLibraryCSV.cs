@@ -1,27 +1,23 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using Xamarin.KotlinX.Coroutines.Channels;
 
 namespace MyMediaLibrary.DataAccess
 {
-	public class MediaLibraryCSV
+	public class MediaLibraryCSV : IDataAccessManager
 	{
 
         string _fileName;
         private MediaLibrary _mediaLibrary;
 
-        public MediaLibraryCSV(string fileName)
+
+        public Collection<MediaItem> Read()
         {
-            _fileName = fileName;
+            return null;
         }
 
-
-        public void WriteProducts(ObservableCollection<MediaItem> MediaItems)
+        public void Save(Collection<MediaItem> mediaItems)
         {
-            
-          
         }
-
 
 
     }
