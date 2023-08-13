@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using MyMediaLibrary.DataAccess;
-
+//AUTHORS: JULIUS, PUNEET, BILAL
+//main library (ALL METHODS ARE LISTED IN HERE THAT IS ASSOCIATED)
 namespace MyMediaLibrary
 {
 	public class MediaLibrary

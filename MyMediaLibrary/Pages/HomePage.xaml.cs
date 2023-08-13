@@ -6,7 +6,10 @@ namespace MyMediaLibrary.Pages;
 
 public partial class HomePage : ContentPage
 {
-
+    //AUTHORS: JULIUS, PUNEET, BILAL
+    //is the main page of data transmitted
+    //data binding with medialibrary
+    //buttons are used to go to other pages like (add, drop, edit, search)
 
     //establishing data 
     public MediaLibrary _mediaLibrary = new MediaLibrary();

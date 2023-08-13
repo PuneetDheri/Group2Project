@@ -1,6 +1,10 @@
 ﻿using System;
 namespace MyMediaLibrary
 {
+	//AUTHOR: JULIUS
+	//gets the method of name
+	//property and constructor
+
 	public class User
 	{
 		//both user are going to be private value

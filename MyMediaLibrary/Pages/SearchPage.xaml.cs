@@ -2,9 +2,16 @@
 
 public partial class SearchPage : ContentPage
 {
+    //AUTHOR: JULIUS
+    //to use the method of SearchByTitle to iterate through the list
+    //and find the title that is associated with the user input
+    //returns it
 
+
+    //added an instance of medialibrary
     private MediaLibrary _mediaLibrary;
 
+    
     public SearchPage(MediaLibrary mediaLibrary)
 	{
 		_mediaLibrary = mediaLibrary;
