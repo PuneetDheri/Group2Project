@@ -68,5 +68,12 @@
                  Style="{StaticResource ButtonStyle}"
                  />
 
+         <Button
+            x:Name="HomeMenuButton"
+            Text="Home"
+            Clicked="OnHomePage"
+            HorizontalOptions="Center"
+            Style="{StaticResource ButtonStyle}" />
+
     </VerticalStackLayout>
 </ContentPage>

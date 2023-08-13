@@ -18,7 +18,7 @@ public partial class AddPage : ContentPage
 
 
 
-    void OnAddMediaClicked(System.Object sender, System.EventArgs e)
+     async void OnAddMediaClicked(System.Object sender, System.EventArgs e)
     {
         string title = TitleEntry.Text;
         string category = CategoryEntry.Text;
@@ -34,9 +34,15 @@ public partial class AddPage : ContentPage
         MediaItem mediaItem = new MediaItem(title,category, duration, releaseDate, genre, status);
 
         _mediaLibrary.AddMedia(mediaItem);
+        await DisplayAlert("Success", $"Added {mediaItem.Title} to library.", "OK");
 
 
-        Navigation.PopAsync(); // go back (HomePage)
+        //Navigation.PopAsync(); // go back (HomePage)
+
     }
 
+    private async void OnHomePage(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
 }
