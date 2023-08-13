@@ -9,8 +9,8 @@ namespace MyMediaLibrary
 
 
         // Constructor for the a new Movies Object
-        public Movie(string title, TimeSpan duration, DateTime releaseDate, MediaGenre genre, MediaStatus status, string director, double rating)
-            : base(title, duration, releaseDate, genre, status)
+        public Movie(string title,string category, TimeSpan duration, DateTime releaseDate, MediaGenre genre, MediaStatus status, string director, double rating)
+            : base(title,category, duration, releaseDate, genre, status)
         {
             Director = director;
             Rating = rating;

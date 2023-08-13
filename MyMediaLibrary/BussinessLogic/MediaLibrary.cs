@@ -37,11 +37,11 @@ namespace MyMediaLibrary
             {
                 Collection<MediaItem> initialList = new Collection<MediaItem>
                 {
-                    new MediaItem("AOT", TimeSpan.FromHours(27), DateTime.Now.AddMonths(-23).AddDays(-22), MediaGenre.Fantasy, MediaStatus.Completed),
-                    new MediaItem("FMAB", TimeSpan.FromHours(18), DateTime.Now.AddMonths(-12).AddDays(-22), MediaGenre.Fantasy, MediaStatus.Watching),
-                    new MediaItem("Dr Stone", TimeSpan.FromHours(3), DateTime.Now.AddYears(-1).AddDays(-2), MediaGenre.Adventure, MediaStatus.PlanToWatch),
-                    new MediaItem("Spy x Family", TimeSpan.FromHours(13), DateTime.Now.AddYears(-1).AddDays(-2), MediaGenre.Comedy, MediaStatus.OnHold),
-                    new MediaItem("ChainsawPerson", TimeSpan.FromHours(13), DateTime.Now.AddMonths(-41).AddDays(-22), MediaGenre.Comedy, MediaStatus.Dropped)
+                    new MediaItem("AOT","Anime", TimeSpan.FromHours(27), DateTime.Now.AddMonths(-23).AddDays(-22), MediaGenre.Fantasy, MediaStatus.Completed),
+                    new MediaItem("FMAB","Anime", TimeSpan.FromHours(18), DateTime.Now.AddMonths(-12).AddDays(-22), MediaGenre.Fantasy, MediaStatus.Watching),
+                    new MediaItem("Dr Stone","Anime", TimeSpan.FromHours(3), DateTime.Now.AddYears(-1).AddDays(-2), MediaGenre.Adventure, MediaStatus.PlanToWatch),
+                    new MediaItem("Spy x Family","Anime", TimeSpan.FromHours(13), DateTime.Now.AddYears(-1).AddDays(-2), MediaGenre.Comedy, MediaStatus.OnHold),
+                    new MediaItem("ChainsawPerson","Anime", TimeSpan.FromHours(13), DateTime.Now.AddMonths(-41).AddDays(-22), MediaGenre.Comedy, MediaStatus.Dropped)
                 };
                 dataAccessManager.Save(initialList);
                 return initialList;
@@ -56,11 +56,11 @@ namespace MyMediaLibrary
             dataAccessManager.Save(this.MediaItems);
         }
 
-        public void AddMedia(string title, TimeSpan duration, DateTime releaseDate, MediaGenre genre, MediaStatus status)
+        public void AddMedia(string title,string category, TimeSpan duration, DateTime releaseDate, MediaGenre genre, MediaStatus status)
         {
 
             //create a new MediaItem object using the parameters
-            MediaItem mediaItem = new MediaItem(title, duration, releaseDate, genre, status);
+            MediaItem mediaItem = new MediaItem(title,category, duration, releaseDate, genre, status);
 
 
             //add the mediaItem to the mediaItems list

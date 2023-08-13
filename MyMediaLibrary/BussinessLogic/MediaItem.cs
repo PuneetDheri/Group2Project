@@ -35,6 +35,7 @@ namespace MyMediaLibrary
         public DateTime ReleaseDate { get; set; }
         public MediaGenre Genre { get; set; }
         public MediaStatus Status { get; set; }
+        public string Category { get; set; }
 
         public string GetTitle()
         {
@@ -67,18 +68,19 @@ namespace MyMediaLibrary
 
 
         // constructor 
-        public MediaItem(string title, TimeSpan duration, DateTime releaseDate, MediaGenre genre, MediaStatus status)
+        public MediaItem(string title, string category, TimeSpan duration, DateTime releaseDate, MediaGenre genre, MediaStatus status)
         {
             Title = title;
             Duration = duration;
             ReleaseDate = releaseDate;
             Genre = genre;
             Status = status;
+            Category = category;
         }
 
         public override string ToString()
         {
-            return $"{Title}, {Duration}, {ReleaseDate},{Genre}";
+            return $"{Title}, {Duration}, {ReleaseDate}, {Genre}, {Status}, {Category}";
         }
 
     }

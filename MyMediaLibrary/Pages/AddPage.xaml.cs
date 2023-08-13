@@ -12,7 +12,7 @@ public partial class AddPage : ContentPage
 
         StatusPicker.ItemsSource = Enum.GetValues(typeof(MediaStatus));
         GenrePicker.ItemsSource = Enum.GetValues(typeof(MediaGenre));
-
+       
         _mediaLibrary = mediaLibrary;
     }
 
@@ -21,7 +21,8 @@ public partial class AddPage : ContentPage
     void OnAddMediaClicked(System.Object sender, System.EventArgs e)
     {
         string title = TitleEntry.Text;
-
+        string category = CategoryEntry.Text;
+        DateTime releaseDate = ReleaseDatePicker.Date;
         int minutes = int.Parse(DurationPicker.Text);
         int hours = minutes / 60;
 
@@ -30,7 +31,7 @@ public partial class AddPage : ContentPage
         MediaStatus status = (MediaStatus)Enum.Parse(typeof(MediaStatus), StatusPicker.SelectedItem.ToString());
 
 
-        MediaItem mediaItem = new MediaItem(title, duration, DateTime.Now, genre, status);
+        MediaItem mediaItem = new MediaItem(title,category, duration, releaseDate, genre, status);
 
         _mediaLibrary.AddMedia(mediaItem);
 

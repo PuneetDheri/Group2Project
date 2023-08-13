@@ -23,6 +23,20 @@
                FontSize="Medium"
                Margin="0,0,0,10" />
 
+
+
+         <Label Text="Releaste date"
+               FontSize="Medium"
+               HorizontalOptions="Start"
+               Margin="0,20,0,30" />
+
+        <DatePicker x:Name="ReleaseDatePicker"
+                    FontSize="Medium"
+                    Margin="0,0,0,10" />
+
+
+
+
         <Label Text="Duration in minutes"
                FontSize="Medium"
                HorizontalOptions="Start"

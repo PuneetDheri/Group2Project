@@ -64,6 +64,13 @@
                         HorizontalOptions="FillAndExpand"
                        />
 
+                <Label Text="Category"
+                       FontAttributes="Bold"
+                      
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                       />
+
                 <Label Text="Duration"
                           FontAttributes="Bold"
                       VerticalOptions="Center" 
@@ -103,6 +110,9 @@
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
                             <Label Text="{Binding Title}"
+                                    HorizontalOptions="FillAndExpand"
+                                 />
+                            <Label Text="{Binding Category}"
                                     HorizontalOptions="FillAndExpand"
                                  />
                             <Label Text="{Binding Duration}"

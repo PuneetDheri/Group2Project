@@ -9,8 +9,8 @@ namespace MyMediaLibrary
         public int Seasons { get; set; }
 
         // Constructor for creating a new TVSeries object.
-        public TVSeries(string title, TimeSpan duration, DateTime releaseDate, MediaGenre genre, MediaStatus status, string creator, int episodes, int seasons)
-            : base(title, duration, releaseDate, genre, status)
+        public TVSeries(string title,string category, TimeSpan duration, DateTime releaseDate, MediaGenre genre, MediaStatus status, string creator, int episodes, int seasons)
+            : base(title,category, duration, releaseDate, genre, status)
         {
             Creator = creator;
             Episodes = episodes;

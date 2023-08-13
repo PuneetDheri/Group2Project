@@ -9,8 +9,8 @@ namespace MyMediaLibrary
         public string Publisher { get; set; }
 
         // Constructor for creating a new VideoGame object
-        public VideoGame(string title, TimeSpan duration, DateTime releaseDate, MediaGenre genre, MediaStatus status, string creator, string publisher)
-            : base(title, duration, releaseDate, genre, status)
+        public VideoGame(string title,string category, TimeSpan duration, DateTime releaseDate, MediaGenre genre, MediaStatus status, string creator, string publisher)
+            : base(title,category, duration, releaseDate, genre, status)
         {
             Creator = creator;
             Publisher = publisher;
