@@ -2,6 +2,11 @@
 
 namespace MyMediaLibrary.Pages;
 
+// AUTHOR : PUNEET
+// adds new entries to media library by calling AddMedia method
+// button to go back to homepage
+
+
 public partial class AddPage : ContentPage
 {
     private MediaLibrary _mediaLibrary;

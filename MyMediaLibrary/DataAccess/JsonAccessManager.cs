@@ -3,6 +3,10 @@ using System.Collections.ObjectModel;
 using System.Text.Json;
 using Microsoft.Maui.Storage;
 
+// AUTHOR : PUNEET
+// used Json serialization for data persistence,
+// implements the IDataAccessManager interface for read and save functionality 
+
 namespace MyMediaLibrary.DataAccess
 {
 	public class JsonAccessManager : IDataAccessManager

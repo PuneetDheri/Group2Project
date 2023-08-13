@@ -1,5 +1,9 @@
 ﻿using System;
 namespace MyMediaLibrary
+
+// AUTHOR : PUNEET
+// defines properties of the media item with getters and setters
+
 {
     // enums for the status of media item in library database
     public enum MediaStatus
