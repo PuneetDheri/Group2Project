@@ -12,6 +12,8 @@ namespace MyMediaLibrary.Pages
             InitializeComponent();
             _mediaLibrary = mediaLibrary;
             MediaList.ItemsSource = _mediaLibrary.MediaItems;
+            StatusPicker.ItemsSource = Enum.GetValues(typeof(MediaStatus));
+            GenrePicker.ItemsSource = Enum.GetValues(typeof(MediaGenre));
         }
 
         private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)

@@ -108,7 +108,8 @@
 
 
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal"
+                                     MinimumHeightRequest="40">
                             <Label Text="{Binding Title}"
                                     HorizontalOptions="FillAndExpand"
                                  />

@@ -85,22 +85,16 @@
         <Entry x:Name="TitleEntry" Placeholder="Title" />
         <Entry x:Name="DurationEntry" Placeholder="Duration" />
         <DatePicker x:Name="ReleaseDatePicker" />
-        <Picker x:Name="GenrePicker">
-            <Picker.Items>
-                <x:String>Action</x:String>
-                <x:String>Drama</x:String>
-                <x:String>SciFi</x:String>
-                <x:String>Comedy</x:String>
-               
-            </Picker.Items>
+        <Picker x:Name="GenrePicker"
+                Title="Select Genre"
+                FontSize="Medium"
+                Margin="0,0,0,10">
         </Picker>
-        <Picker x:Name="StatusPicker">
-            <Picker.Items>
-                <x:String>PlanToWatch</x:String>
-                <x:String>Dropped</x:String>
-                <x:String>Completed</x:String>
-               
-            </Picker.Items>
+
+        <Picker x:Name="StatusPicker"
+                Title="Select Status"
+                FontSize="Medium"
+                Margin="0,0,0,10">
         </Picker>
 
         <Button Text="Save Changes" Clicked="OnSaveChanges" Style="{StaticResource ButtonStyle}" />

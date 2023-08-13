@@ -144,31 +144,7 @@ namespace MyMediaLibrary
         }
 
 
-        // Create playlist method
-        public List<MediaItem> CreatePlaylist(List<MediaItem> selectedItems)
-        {
-            List<MediaItem> playlist = new List<MediaItem>();
-
-            // Add selected media items to the playlist
-            foreach (MediaItem item in selectedItems)
-            {
-                playlist.Add(item);
-            }
-
-            return playlist;
-        }
-
-        // delete playlist method
-        public void DeletePlaylist(List<MediaItem> playlist)
-        {
-            //delte playlist items from the library
-            foreach (MediaItem playlistItem in playlist)
-            {
-                mediaItems.Remove(playlistItem);
-            }
-            dataAccessManager.Save(this.MediaItems);
-
-        }
+        
 
     }
 }
