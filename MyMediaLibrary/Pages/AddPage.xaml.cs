@@ -41,13 +41,16 @@ public partial class AddPage : ContentPage
         _mediaLibrary.AddMedia(mediaItem);
         await DisplayAlert("Success", $"Added {mediaItem.Title} to library.", "OK");
 
-
-        //Navigation.PopAsync(); // go back (HomePage)
-
+        TitleEntry.Text = "";
+        CategoryEntry.Text="";
+        DurationPicker.Text = "";
+        ReleaseDatePicker.Date = DateTime.Now;
+        GenrePicker.SelectedItem = "";
+        StatusPicker.SelectedItem = "";
     }
 
     private async void OnHomePage(object sender, EventArgs e)
     {
-        await Navigation.PopAsync();
+        await Navigation.PopAsync(); // go back (HomePage)
     }
 }
